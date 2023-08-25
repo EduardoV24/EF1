@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(Call<List<Teams>> call, Response<List<Teams>> response) {
                 List<Teams> items = response.body();
-                showTeams(items);
+                Teams(items);
             }
 
             @Override
@@ -62,7 +62,7 @@ public class HomeFragment extends Fragment {
         });
     }
 
-    private void showTeams(List<Teams> showsList) {
+    private void Teams(List<Teams> showsList) {
         RVResumeAdapter rvShowProductAdapter = new RVResumeAdapter(showsList);
         recyclerView.setAdapter(rvShowProductAdapter);
     }
